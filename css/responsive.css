@@ -1,0 +1,91 @@
+.main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.nav-background {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  z-index: 1;
+}
+.site-content-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+.site-content-wrap.scaled {
+  transform: scale(0.9) translateX(90%);
+  box-shadow: 0 3px 10px 0 #555;
+}
+.nav-trigger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 15px;
+  display: none;
+}
+.nav-trigger svg {
+  transform: rotate(90deg) scaleX(-1);
+  width: 40px;
+  height: 40px;
+}
+.site-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+@media (max-width: 992px) {
+  .nav-trigger {
+    display: block;
+  }
+  .header-area {
+    display: none;
+  }
+}
+.nav-background {
+  padding-left: 10px;
+}
+.nav-background .mobile-logo h1 {
+  font-size: 1.2rem;
+  color: #222;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.nav-background .nav-menu ul li a {
+  text-decoration: none;
+  font-size: 1re;
+  color: #c03c14;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.nav-background .nav-menu ul li a:hover {
+  color: #222;
+}
+.nav-background .nav-menu ul li {
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .home-content .home-text h2 {
+    font-size: 1.9rem;
+  }
+  .home-content .home-text h1 {
+    font-size: 2.2rem;
+  }
+  .home-content {
+    padding-top: 10rem;
+  }
+}
